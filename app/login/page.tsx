@@ -19,6 +19,11 @@ export default function LoginPage() {
   const [error, setError] = useState("")
   const [isLoading, setIsLoading] = useState(false)
 
+  const handleDemoLogin = () => {
+    setEmail("demo@climateapp.com")
+    setPassword("demo123")
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setError("")
@@ -78,6 +83,22 @@ export default function LoginPage() {
                   {error}
                 </div>
               )}
+
+              <div className="bg-primary/10 border border-primary/20 text-sm p-3 rounded-lg flex items-start justify-between gap-2">
+                <div className="flex-1">
+                  <p className="font-medium text-primary">Demo Account Available</p>
+                  <p className="text-muted-foreground text-xs mt-1">Try the app without creating an account</p>
+                </div>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={handleDemoLogin}
+                  className="shrink-0 bg-transparent"
+                >
+                  Autofill
+                </Button>
+              </div>
 
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium">

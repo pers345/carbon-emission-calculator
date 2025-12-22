@@ -6,6 +6,7 @@ import { TipsSection } from "@/components/tips-section"
 import { Footer } from "@/components/footer"
 import { GlobalEmissionsMap } from "@/components/global-emissions-map"
 import { RouteEmissionsCalculator } from "@/components/route-emissions-calculator"
+import { FAQSection } from "@/components/faq-section"
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ImpactBreakdown />
       <GlobalEmissionsMap />
       <TipsSection />
+      <FAQSection />
       <Footer />
     </main>
   )
